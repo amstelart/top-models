@@ -1,0 +1,88 @@
+// В этом файле должны быть стили для БЭМ-блока pagination, его элементов,
+// модификаторов, псевдоселекторов, псевдоэлементов, @media-условий...
+// Очередность: http://nicothin.github.io/idiomatic-pre-CSS/#priority
+
+$line-height:                 1.375em !default;
+
+$text-color:                  hsl(0, 0%, 10%) !default;
+
+$border-color:                hsl(0, 0%, 60%) !default;
+
+.pagination {
+
+  $block-name:                &; // #{$block-name}__element
+
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+
+  &__item {
+    display: block;
+    padding: 0.5em;
+    // min-width: 2.5em;
+    text-decoration: none;
+    text-align: center;
+    font-family: 'Arial';
+    color: $color-main-dark-2;
+    font-size: 24px;
+    cursor: pointer;
+
+    & + & {
+      border-left: 0;
+    }
+
+    // &:hover,
+    // &:focus {
+    //   text-decoration: none;
+    //   color: $text-color;
+    // }
+
+    @at-root a#{&} {
+
+      &:hover,
+      &:focus {
+        // background-color: $gray-lightest;
+      }
+    }
+
+    span {
+
+      position: relative;
+      display: inline-block;
+      width: 24px;
+      height: 24px;
+
+      &:after {
+        content: '';
+        position: absolute;
+        width: 14px;
+        height: 14px;
+        opacity: 1;
+        border-left: 2px solid #d3be84;
+        border-bottom: 2px solid #d3be84;
+        transition: opacity 0.3s;
+      }
+
+      &.prev {
+        &:after {
+          transform: rotate(45deg);
+          top: 4px;
+          left: 8px;
+        }
+      }
+
+      &.next {
+        &:after {
+          transform: rotate(-135deg);
+          top: 4px;
+          right: 8px;
+        }
+      }
+    }
+
+    &--active {
+      color: #fff;
+      // background-color: $gray-lightest;
+    }
+  }
+}

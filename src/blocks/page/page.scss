@@ -1,0 +1,1158 @@
+
+// Make viewport great again (responsive)
+// http://timkadlec.com/2012/10/ie10-snap-mode-and-responsive-design/
+@at-root {
+
+  @-ms-viewport { // stylelint-disable-line  at-rule-no-vendor-prefix
+    width: device-width;
+  }
+}
+
+.page { // html
+
+  $block-name:                &; // #{$block-name}__element
+
+  box-sizing: border-box;
+  font-size: 10px;
+  -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+  -ms-overflow-style: scrollbar;
+  -ms-text-size-adjust: 100%; // stylelint-disable-line  property-no-vendor-prefix
+  min-width: 320px;
+  min-height: 100%;
+
+  &__inner {
+    min-height: 100vh;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+  }
+
+  &__content {
+    flex-grow: 1;
+  }
+
+  &__footer-wrapper {
+    flex-shrink: 0;
+  }
+}
+
+*,
+*:before,
+*:after {
+  box-sizing: inherit;
+}
+
+.container {
+  @include container;
+}
+
+body {
+  // Типографика проекта — в блоке typo
+  display: flex;           // Исправляем баг в IE для min-height and flexbox (flex-direction:column)
+  flex-direction: column;  // и прижимаем footer в IE 10-11
+  background-color: $color-dark;
+  margin: 0;
+  min-height: 100%;
+  padding-top: 90px;
+
+  @media (max-width: ($screen-lg - 1)) {
+    padding-top: 57px;
+  }
+}
+
+@media (max-width: ($screen-xl - 1)) {
+  .main {
+    padding-top: 90px;
+  }
+}
+
+@media (max-width: ($screen-lg)) {
+  .main {
+    padding-top: 57px;
+  }
+}
+
+[tabindex='-1']:focus {
+  outline: none !important; // stylelint-disable-line  declaration-no-important
+}
+
+// iOS 'clickable elements' fix for role='button'
+[role='button'] {
+  cursor: pointer;
+}
+
+// We love Safari
+input[type='search'] {
+  -webkit-appearance: textfield; // stylelint-disable-line  property-no-vendor-prefix
+}
+
+// Avoid 300ms click delay on touch devices that support the `touch-action` CSS property.
+a,
+// area,
+button,
+[role='button'],
+input,
+label,
+select,
+// summary,
+textarea {
+  touch-action: manipulation;
+}
+
+
+// We love EDGE! This is a browser!
+svg {
+
+  a &,
+  button & {
+    pointer-events: none;
+  }
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+// Временные стили которые следует разбить на блоки
+
+
+.main {
+  padding-top: 0;
+}
+
+.social {
+  display: flex;
+  align-items: center;
+  &__item {
+
+    &:not(:first-child) {
+      margin-left: 15px;
+    }
+
+    &:hover,
+    &:focus {
+      .icon {
+        fill: $color-main;
+      }
+    }
+
+    .icon {
+      fill: $color-main-dark-2;
+      color: $color-main-dark-2;
+      transition: all 0.2s ease-in-out;
+    }
+  }
+}
+
+.heading {
+  color: $color-main;
+  margin-top: 0;
+  margin-bottom: 1em;
+  line-height: 1;
+  font-size: 2.26em;
+}
+
+.more-mobile {
+  font-size: 16px;
+  color: $color-main-dark;
+  font-family: 'Arial';
+  text-decoration: none;
+  display: none;
+
+  @media (max-width: $screen-lg - 1) {
+    display: block;
+  }
+}
+
+.heading-decor {
+  color: $color-main;
+  margin: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 36px;
+  position: relative;
+
+  .more {
+    font-size: 16px;
+    color: $color-main-dark;
+    font-family: 'Arial';
+    text-decoration: none;
+    position: absolute;
+    right: 0;
+    bottom: 0;
+
+    @media (max-width: $screen-lg - 1) {
+      display: none;
+    }
+  }
+
+  &:before {
+    content: "";
+    display: inline-block;
+    width: 60px;
+    height: 1px;
+    background: $color-main-dark;
+    margin-right: 30px;
+  }
+
+  &:after {
+    content: "";
+    display: inline-block;
+    width: 60px;
+    height: 1px;
+    background: $color-main-dark;
+    margin-left: 30px;
+  }
+
+  @media (max-width: ($screen-md - 1)) {
+    padding: 15px 0;
+    font-size: 24px;
+
+    &:before {
+      width: 10%;
+      margin-right: 15px;
+    }
+
+    &:after {
+      width: 10%;
+      margin-left: 15px;
+    }
+  }
+}
+
+.feedback {
+  display: flex;
+  margin-right: 30px;
+}
+
+.history-box {
+  padding: 50px 0;
+  background-color: $color-dark;
+  color: #fff;
+  background-position: 50%;
+  background-repeat: no-repeat;
+  // background-attachment: fixed;
+  background-size: cover;
+
+  &__text {
+    @include row;
+    p {
+      @include col();
+      @include col(lg, 6);
+      margin-top: 0;
+      display: inline-block;
+      color: #e8e8e8;
+      font-weight: 400;
+      line-height: 2.2;
+    }
+  }
+
+  .more {
+    color: $color-main;
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+    font-size: 16px;
+    max-width: 170px;
+
+    .icon {
+      fill: $color-main;
+      margin-left: 25px;
+    }
+
+    &:hover,
+    &:focus {
+      color: $color-main-dark;
+
+      .icon {
+        fill: $color-main-dark;
+      }
+    }
+  }
+}
+
+.banner-box {
+  width: 100%;
+  position: relative;
+  height: 100vh;
+  background-color: #858585;
+  background-position: 50%;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-size: cover;
+
+  img {
+    display: none;
+  }
+
+  @media (max-width: $screen-xl - 1) {
+    height: auto;
+    img {
+      display: block;
+      width: 100%;
+    }
+  }
+}
+
+.home-banner-1 {
+  background-image: url('../img/banner-1.jpg');
+}
+.home-banner-2 {
+  background-image: url('../img/banner-2.jpg');
+}
+.home-banner-3 {
+  background-image: url('../img/banner-3.jpg');
+}
+
+.news-box {
+
+  background: $color-dark;
+  padding: 0 30px 5px 30px;
+
+  &__header {
+    text-align: center;
+    padding-top: 45px;
+    padding-bottom: 30px;
+
+    .more {}
+  }
+
+  &__body {
+    @include row;
+  }
+
+  @media (max-width: ($screen-md - 1)) {
+    padding: 0 15px 5px 15px;
+  }
+}
+
+.news-box-card {
+  @include col();
+  @include col(lg, 4);
+  margin-bottom: 30px;
+
+  @media (max-width: ($screen-lg - 1)) {
+    &:not(:first-child) {
+      display: none;
+    }
+  }
+
+  &__image {
+    img {
+      display: block;
+    }
+  }
+
+  &__body {
+    color: #e8e8e8;
+    padding: 35px 32px;
+    background: #31302f;
+    font-size: 16px;
+    line-height: 36px;
+
+    @media (max-width: ($screen-lg - 1)) {
+      padding: 20px;
+    }
+
+    .meta {
+      display: flex;
+      align-items: center;
+    }
+
+    .posted {
+      font-family: 'Arial';
+      color: #6d6d6c;
+    }
+    .more {
+      margin-left: 20px;
+      margin-top: 10px;
+
+      .icon {
+        fill: $color-main-dark-2;
+      }
+
+      &:hover,
+      &:focus {
+        .icon {
+          fill: $color-main;
+        }
+      }
+    }
+  }
+}
+
+.project-box {
+  background: $color-dark;
+
+  &__header {
+    display: flex;
+    flex-wrap: wrap;
+    height: 140px;
+
+    .carousel-nav,
+    .heading-decor {
+      width: 33.3%;
+    }
+
+    .heading-decor {
+      white-space: nowrap;
+    }
+
+    @media (max-width: ($screen-lg - 1)) {
+
+      height: auto;
+
+      .heading-decor {
+        width: auto;
+        flex-grow: 1;
+
+        &:before,
+        &:after {
+          display: none;
+        }
+      }
+
+      .carousel-nav {
+        width: auto;
+        padding: 20px 15px;
+
+        .icon {
+          width: 30px;
+          height: auto;
+        }
+      }
+    }
+  }
+}
+
+.carousel-nav {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: $color-dark;
+  cursor: pointer;
+  border: none;
+  transition: all 0.2s ease-in-out;
+  outline: none;
+
+  .icon {
+    fill: $color-main-dark;
+    transition: all 0.2s ease-in-out;
+  }
+
+  &:hover,
+  &:focus {
+    background: #31302f;
+
+    .icon {
+      fill: $color-main;
+    }
+  }
+}
+
+.link-card {
+  position: relative;
+
+  &:before {
+    content: "";
+    display: block;
+    padding-bottom: 65%;
+  }
+
+  &__wrap {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    width: 100%;
+    height: 100%;
+    text-decoration: none;
+    background-position: 50%;
+    background-repeat: no-repeat;
+    -webkit-background-size: cover !important;
+    background-size: cover !important;
+
+    &:hover,
+    &:focus {
+
+      .link-card__inner {
+        background: transparent;
+      }
+
+      .link-card__btn {
+        background: #d3be84;
+        border-color: #d3be84;
+        color: #000;
+      }
+    }
+  }
+
+  &__inner {
+    padding: 20px;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background: rgba(35, 34, 33, 0.45);
+    transition: all 0.2s ease-in-out;
+  }
+
+  &__name {
+    color: #fff;
+    font-size: 36px;
+    line-height: 1;
+    margin-bottom: 0.5em;
+    font-family: $font-family--headings;
+  }
+
+  &__btn {
+    color: #fff;
+    border: 1px solid rgba(255, 255, 255, 0.45);
+    font-size: 16px;
+    padding: 15px 25px;
+  }
+}
+
+.portfolio-grid {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
+  margin-left: -5px;
+  margin-right: -5px;
+
+  &__item {
+    flex: 0 0 50%;
+    max-width: 50%;
+    padding-left: 5px;
+    padding-right: 5px;
+    padding-bottom: 10px;
+
+    @media (max-width: $screen-md - 1) {
+      flex: 0 0 100%;
+      max-width: 100%;
+
+      &.plaseholder {
+        display: none;
+      }
+    }
+  }
+
+  // &__inner {
+  //   position: relative;
+  //   &:before {
+  //     content: "";
+  //     display: block;
+  //     padding-bottom: 60%;
+  //   }
+  // }
+
+}
+
+.media-box {
+  padding-top: 20px;
+  padding-bottom: 20px;
+}
+
+.progect-gallery {
+  position: relative;
+
+  &__item {
+    width: 100%;
+    position: relative;
+    background-color: #858585;
+    background-position: 50%;
+    background-repeat: no-repeat;
+    background-size: cover;
+
+    &:not(:last-child) {
+      margin-bottom: 20px;
+    }
+
+    &:before {
+      content: "";
+      padding-bottom: 60%;
+      display: block;
+    }
+  }
+}
+
+.progect-pager {
+  display: flex;
+  &__item {
+    flex: 0 0 50%;
+    max-width: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 50px 15px;
+    color: $color-main-dark;
+    text-decoration: none;
+
+    .icon {
+      fill: $color-main-dark;
+    }
+
+    &:hover,
+    &:focus {
+
+      background: #31302f;
+      color: $color-main;
+
+      .icon {
+        fill: $color-main;
+      }
+    }
+
+    &.prev {
+      .icon {
+        margin-right: 15px;
+      }
+    }
+    &.next {
+      .icon {
+        margin-left: 15px;
+      }
+    }
+  }
+
+  @media (max-width: ($screen-md - 1)) {
+
+    &__item {
+      padding: 20px 15px;
+
+      span {
+        display: none;
+      }
+    }
+  }
+}
+
+.intro-banner {
+  width: 100%;
+  position: relative;
+  height: 100vh;
+  background-color: #858585;
+  background-position: 50%;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-size: cover;
+  &:before {
+    content: "";
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background: rgba(35, 34, 33, 0.45);
+  }
+
+  &__inner {
+    display: flex;
+    position: relative;
+    z-index: 2;
+    width: 100%;
+    height: 100%;
+    align-items: center;
+    flex-direction: column;
+    justify-content: center;
+
+    .progect-name {
+      color: #fff;
+      font-size: 72px;
+      line-height: 1.3;
+      margin: 0;
+    }
+
+    .project-details {
+      font-size: 18px;
+      color: #fff;
+    }
+  }
+}
+
+ .news-grid {
+   &__row {
+      display: flex;
+      flex-wrap: wrap;
+
+      @media (max-width: ($screen-md - 1)) {
+
+        .ng-poster {
+          order: 1;
+          height: auto;
+          &:before {
+            content: "";
+            display: block;
+            padding-bottom: 60%;
+          }
+        }
+
+        .ng-content {
+          order: 2;
+          padding: 15px 15px  30px 15px;
+          height: auto;
+        }
+      }
+
+      &:nth-child(even) {
+        .ng-content {
+          background: #f5f5f5;
+
+          &__text {
+            color: #212121;
+          }
+
+          &__meta {
+
+            .more {
+              text-decoration: none;
+              color: #af9754;
+              display: flex;
+              align-items: center;
+
+              .icon {
+                fill: #af9754;
+                margin-left: 15px;
+              }
+            }
+          }
+        }
+      }
+   }
+
+   &__col {
+      flex: 0 0 50%;
+      max-width: 50%;
+      height: 400px;
+
+      @media (max-width: ($screen-md - 1)) {
+        flex: 0 0 100%;
+        max-width: 100%;
+
+        .ng-poster {
+          order: 1;
+        }
+
+        .ng-content {
+          order: 2;
+        }
+      }
+   }
+ }
+
+ .ng-poster {
+    background-size: cover;
+    background-color: #afafaf;
+    background-repeat: no-repeat;
+    background-position: 50% 30%;
+ }
+
+ .ng-content {
+  background: #31302f;
+  padding: 30px 130px 30px 30px;
+
+  @media (max-width: ($screen-lg - 1)) {
+    padding: 30px;
+  }
+
+  &__text {
+    color: #e8e8e8;
+    font-size: 16px;
+    line-height: 36px;
+  }
+
+  &__meta {
+
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+
+    .more {
+      text-decoration: none;
+      color: $color-main;
+      display: flex;
+      align-items: center;
+
+      .icon {
+        fill: $color-main;
+        margin-left: 15px;
+      }
+    }
+    .posted {
+      color: #6d6d6c;
+      font-family: 'Arial';
+    }
+  }
+ }
+
+ .headline {
+   background: #3e3d3b;
+   overflow: hidden;
+   text-align: center;
+   &__title {
+     color: $color-main;
+     margin: 0;
+     padding: 45px 0;
+     line-height: 1;
+     font-size: 36px;
+     position: relative;
+     @include container;
+
+     @media (max-width: ($screen-xl - 1)) {
+      padding: 25px 0;
+      font-size: 36px;
+     }
+
+     @media (max-width: ($screen-md - 1)) {
+      padding: 15px 0;
+      font-size: 32px;
+
+      .back {
+        display: none;
+      }
+     }
+
+     .back {
+       position: absolute;
+       left: 15px;
+       top: 50%;
+       transform: translateY(-50%);
+       color: $color-main-dark-2;
+       float: left;
+       font-family: 'Arial';
+       text-decoration: none;
+       display: flex;
+       align-items: center;
+       font-size: 16px;
+
+       .icon {
+         fill: $color-main-dark-2;
+         margin-right: 25px;
+       }
+
+       &:hover,
+       &:focus {
+         color: $color-main;
+
+         .icon {
+           fill: $color-main;
+         }
+       }
+     }
+   }
+ }
+
+ .post {
+   @include container;
+   padding-left: 0;
+   padding-right: 0;
+   background: #fff;
+
+   &__poster {
+     background: #31302f;
+
+     img {
+       width: 100%;
+       display: block;
+     }
+   }
+
+   &__content {
+      padding: 40px;
+
+      font-size: 16px;
+      line-height: 36px;
+   }
+
+   &__image {
+
+    margin-top: 40px;
+
+     img {
+       width: 100%;
+       display: block;
+     }
+   }
+
+   &__posted {
+     font-size: 16px;
+     color: #6d6d6c;
+     font-family: 'Arial';
+     float: right;
+   }
+
+   &__heading {
+     position: relative;
+
+     &:before {
+       content: "";
+       width: 60px;
+       height: 2px;
+       background: #d6d6d5;
+       display: block;
+       position: absolute;
+       left: 0;
+       top: -40px;
+     }
+   }
+
+   &__footer {
+     padding: 0 40px 40px 40px;
+     display: flex;
+     flex-wrap: wrap;
+     justify-content: space-between;
+
+     .back {
+       color: $color-main;
+       text-decoration: none;
+       display: flex;
+       align-items: center;
+       font-size: 16px;
+
+       @media (max-width: ($screen-sm - 1)) {
+         margin-bottom: 15px;
+       }
+
+       .icon {
+         fill: $color-main;
+         margin-right: 25px;
+       }
+
+       &:hover,
+       &:focus {
+         color: $color-main-dark;
+
+         .icon {
+           fill: $color-main-dark;
+         }
+       }
+     }
+   }
+ }
+
+
+ .share {
+
+  color: $color-main;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 16px;
+
+   &__list {
+     list-style: none;
+     padding: 0;
+     margin: 0 0 0 20px;
+
+     li {
+       display: inline-block;
+
+       &:not(:first-child) {
+         margin-left: 5px;
+       }
+
+       a {
+         display: block;
+         padding: 5px;
+
+         .icon {
+           fill: $color-main;
+         }
+
+         &:hover,
+         &:focus {
+           color: $color-main-dark;
+
+           .icon {
+             fill: $color-main-dark;
+           }
+         }
+       }
+     }
+   }
+
+  &--project {
+    background: #232221;
+    z-index: 2;
+    padding: 20px;
+    position: absolute;
+    bottom: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+    display: flex;
+    flex-direction: column;
+
+    .share__list {
+      margin-left: 0;
+      white-space: nowrap;
+    }
+
+    span {
+      margin-bottom: 10px;
+    }
+  }
+ }
+
+ .contacts {
+    &__row {
+      display: flex;
+      flex-wrap: wrap;
+
+      // если карта выключена
+      &.map-off {
+        .contacts__col--map {
+          display: none;
+        }
+
+        .contacts__col--image {
+          flex: 0 0 100%;
+          max-width: 100%;
+          min-height: 400px;
+        }
+      }
+    }
+
+   &__col {
+     flex: 0 0 50%;
+     max-width: 50%;
+
+     @media (max-width: ($screen-xl - 1)) {
+       flex: 0 0 100%;
+       max-width: 100%;
+     }
+
+     &--info {
+       background: #fff;
+       display: flex;
+       align-items: center;
+       justify-content: center;
+       padding: 50px 15px;
+     }
+
+     &--form {
+       background: #393837;
+       display: flex;
+       align-items: center;
+       justify-content: center;
+       padding: 50px 15px;
+     }
+
+     &--image {
+       background-size: cover;
+       background-repeat: no-repeat;
+     }
+
+     @media (max-width: $screen-lg - 1) {
+       flex: 0 0 100%;
+       max-width: 100%;
+
+       &--info {
+         padding-top: 20px;
+       }
+
+       .contacts-form-title {
+         margin-top: 0;
+       }
+
+       #contact-map {
+         height: 330px !important;
+         overflow: hidden;
+       }
+     }
+   }
+ }
+
+ .contact-list {
+   list-style: none;
+   margin: 0;
+   padding: 0;
+   max-width: 390px;
+
+   @media (max-width: $screen-xl - 1) {
+     // max-width: 100%;
+     // width: 100%;
+
+     li {
+       flex-direction: column;
+       align-items: center;
+
+       > span {
+         margin-bottom: 10px;
+       }
+
+       > a {
+         align-self: auto;
+       }
+     }
+   }
+
+   li {
+     display: flex;
+     justify-content: space-between;
+     align-items: flex-start;
+     padding: 20px 0;
+
+     &:not(:last-child) {
+       border-bottom: 1px solid #ebebeb;
+     }
+
+     > span {
+       font-size: 36px;
+       line-height: 1.1;
+       color: $color-main;
+       font-family: $font-family--headings;
+
+       @media (max-width: $screen-md - 1) {
+         font-size: 22px;
+       }
+     }
+
+     a {
+       text-decoration: none;
+       color: #393837;
+     }
+
+     > a {
+       align-self: flex-end;
+       margin-bottom: 5px;
+     }
+   }
+ }
+
+.contacts-form-wrap {
+  max-width: 560px;
+}
+
+ .contacts-form-title {
+   color: $color-main;
+
+   @media (max-width: $screen-xl - 1) {
+     text-align: center;
+   }
+ }
+
+
+.pagination-wrap {
+  background: #3e3d3b;
+  padding-top: $line-height;
+  padding-bottom: $line-height;
+
+  .pagination {
+
+  }
+}
+
+.owl-carousel .owl-stage, .owl-carousel.owl-drag .owl-item{
+    -ms-touch-action: auto;
+        touch-action: auto;
+}
+
+
+// END Временные стили которые следует разбить на блоки

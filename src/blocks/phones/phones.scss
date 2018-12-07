@@ -1,0 +1,119 @@
+// В этом файле должны быть стили для БЭМ-блока phones, его элементов,
+// модификаторов, псевдоселекторов, псевдоэлементов, @media-условий...
+// Очередность: http://nicothin.github.io/idiomatic-pre-CSS/#priority
+
+.phones {
+
+  $block-name:                &; // #{$block-name}__element
+
+  &__item {
+    position: relative;
+    font-size: 16px;
+    font-family: 'Arial';
+    white-space: nowrap;
+
+    a {
+      transition: all 0.2s ease-in-out;
+    }
+
+    .icon {
+      vertical-align: top;
+      margin-right: 5px;
+      transition: all 0.2s ease-in-out;
+    }
+  }
+
+  &--header {
+
+    margin-right: 45px;
+
+    #{$block-name}__item {
+
+      .icon {
+        fill: $color-main-dark;
+      }
+
+      &:not(:last-child) {
+        margin-bottom: 10px;
+      }
+
+      a {
+        color: $color-main-dark;
+        text-decoration: none;
+      }
+
+      &:hover,
+      &:focus {
+
+        a {
+          color: $color-main;
+        }
+
+        .icon {
+          fill: $color-main;
+        }
+      }
+    }
+  }
+
+  &--footer {
+
+    #{$block-name}__item {
+      display: inline-block;
+
+      @media (max-width: ($screen-xl - 1)) {
+
+        display: block;
+        text-align: center;
+
+        &:not(:first-child) {
+          margin-left: 0;
+          margin-top: 10px;
+        }
+      }
+
+      .icon {
+        fill: $color-main-dark-2;
+      }
+
+      &:not(:first-child) {
+        margin-left: 20px;
+      }
+
+      a {
+        color: $color-main-dark-2;
+        text-decoration: none;
+      }
+
+      &:hover,
+      &:focus {
+
+        a {
+          color: $color-main;
+        }
+
+        .icon {
+          fill: $color-main;
+        }
+      }
+    }
+  }
+
+  &--contact {
+
+    #{$block-name}__item {
+      margin-bottom: 15px;
+      margin-top: 12px;
+
+      .icon {
+        fill: #393837;
+      }
+
+      a {
+        color: #393837;
+        text-decoration: none;
+      }
+    }
+  }
+
+}
