@@ -1,0 +1,261 @@
+<!DOCTYPE html>
+<html class="no-js  page" lang="ru">
+
+<head>
+  <meta charset="utf-8">
+  <title>Green Park</title>
+  <meta name="description" content=""> <!--DEV Такой комментарий не попадет в собранный HTML
+<meta name="viewport" content="width=1000">
+-->
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="format-detection" content="telephone=no">
+
+<link href="css/style.min.css" rel="stylesheet" media="screen">
+
+<link rel="icon" type="image/png" sizes="32x32" href="img/favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="16x16" href="img/favicon-16x16.png">
+<link rel="shortcut icon" href="img/favicon.ico">
+
+<script>
+  // Маркер работающего javascript
+  document.documentElement.className = document.documentElement.className.replace('no-js', 'js');
+  document.addEventListener('DOMContentLoaded', function(){
+    if (window.isMobile !== undefined) {
+      // console.log(isMobile);
+      if(isMobile.any) {
+        var rootClasses = ' is-mobile';
+        for (key in isMobile) {
+          if(typeof isMobile[key] === 'boolean' && isMobile[key] && key !== 'any') rootClasses += ' is-mobile--'+key;
+          if(typeof isMobile[key] === 'object' && key !== 'other') {
+            for (type in isMobile[key]) {
+              if(isMobile[key][type]) rootClasses += ' is-mobile--'+key+'-'+type;
+            }
+          }
+        }
+        document.documentElement.className += rootClasses;
+      }
+    }
+    else {
+      console.log('Классы для мобильных не добавлены: в сборке отсутствует isMobile.js');
+    }
+  });
+
+</script>
+
+</head>
+
+<body class="main">
+
+  <div class="page__inner">
+
+    <div class="page__content">
+
+      <header class="header" role="banner">
+        <div class="container">
+          <div class="header-inner">
+            <a href="index.html" class="site-logo">
+              <img width="180px" src="img/logo.svg" alt="">
+            </a>
+            <div class="navigation-wr">
+              <nav class="navigation">
+                <ul>
+                  <li class="menu-item-has-children current-menu-parent"> <a href="01_Home.html">Модели</a> <span class="sub-menu-toggle"></span>
+                    <ul class="sub-menu">
+                      <li><a href="01_Home.html">Dark with carousel</a></li>
+                      <li class="current-menu-item"><a href="03_Home.html">Dark with slider</a></li>
+                      <li><a href="02_Home_White.html">White version</a></li>
+                    </ul>
+                  </li>
+                  <li class="menu-item-has-children"> <a href="06_Models_Load_More.html">Стать моделью</a> <span class="sub-menu-toggle"></span>
+                    <ul class="sub-menu">
+                      <li><a href="06_Models_Load_More.html">Side version</a></li>
+                      <li><a href="08_Models_Map_View_Alternative.html">Side version 3 column</a></li>
+                    </ul>
+                  </li>
+                  <li class="menu-item-has-children"> <a href="blog-grid.html">Блог</a> <span class="sub-menu-toggle"></span>
+                    <ul class="sub-menu">
+                      <li><a href="blog-grid.html">Модели</a></li>
+                      <li><a href="blog-grid.html">Фотосессия</a></li>
+                      <li><a href="blog-grid.html">Подиум</a></li>
+                    </ul>
+                  </li>
+                  <li class="menu-item-has-children"> <a href="18_Basic_Content_Page.html">Контакты</a> <span class="sub-menu-toggle"></span>
+                    <ul class="sub-menu">
+                      <li><a href="12_Blog_Grid.html">Blog Grid</a></li>
+                      <li><a href="13_Blog_Open.html">Blog open</a></li>
+                      <li><a href="18_Basic_Content_Page.html">Basic content</a></li>
+                      <li><a href="19_Basic_Content_Page_Alternative.html">Basic content alt</a></li>
+                      <li><a href="05_Model_Profile.html">Model profile</a></li>
+                      <li><a href="15_FAQ.html">FAQ</a></li>
+                      <li><a href="21_Sign_Up.html">Register</a></li>
+                      <li><a href="20_Log_In.html">Sign In</a></li>
+                    </ul>
+                  </li>
+                </ul>
+              </nav>
+              <div class="right-sec-nav d-flex align-items-center">
+                <form class="search-wr">
+                  <input type="text" id="search" name="search"> <i class="fa fa-search" aria-hidden="true"></i> <input type="submit" class="submit" value="">
+                </form>
+                <div class="lang-menu-wr">
+                  <button class="btn lang-toggle">
+                    <span>RU</span> <i class="fa fa-caret-down" aria-hidden="true"></i>
+                  </button>
+                  <ul class="lang-menu">
+                    <li><a href="#">RU</a></li>
+                    <li><a href="#">EN</a></li>
+                  </ul>
+                </div>
+              </div>
+              <i class="fa fa-times" aria-hidden="true"></i>
+            </div>
+            <i class="fa fa-bars" aria-hidden="true"></i>
+          </div>
+        </div>
+      </header>
+
+
+      <main role="main">
+        <div class="container">
+          <div id="breadcrumbs"> <a href="#">Главная</a> <i class="fa fa-angle-right separator"></i> <a href="#">Блог</a> <i class="fa fa-angle-right separator"></i> <span class="breadcrumb-last">Пост</span> </div>
+        </div>
+        <div class="container single-post-entry">
+          <div class="row">
+            <div class="col-lg-9">
+              <section class="single-post-content">
+                <div class="single-post-img"> <img src="img/stock_53_860x520.jpg" alt=""> </div>
+                <h1 class="post-title">Восстание машин: как роботы и кибер-модели завоевывают мир моды</h1>
+                <p class="publish-age"> <span class="date">4 дня назад</span> <span class="separator">•</span> <span class="viewed"><i class="fa fa-eye"></i> 1570</span> <span class="separator">•</span> <span class="comments"><i class="fa fa-comments-o"
+                      aria-hidden="true"></i> 3</span> </p>
+                <div class="post-content">
+                  <p>В Украину приехала София - человекоподобный робот, разработанный гонконгской компанией Hanson Robotics. Активирована она была весной 2015-го, а спустя два года даже получила гражданство Саудовской Аравии. София обладает искусственным интеллектом, умеет распознавать лица, в ее функционале есть около 60 оттенков эмоций, а внешность смоделирована по актрисе Одри Хепберн. Последняя характеристика уже помогла ей открыть для себя мир моды. </p>
+                  <p>Так, в ее портфолио уже есть несколько модных обложек. В начале 2018-го она украсила юбилейный 400-й выпуск британского Stylist, в марте появилась у Cosmopolitan India, а еще спустя пару месяцев уже сотрудничала с бразильской редакцией Elle. Главный редактор Stylist Сьюзен Райли назвала эту работу способом показать не только степень развития технологий сегодня, но и то, какой проблемой это может быть. В их случае, съемка происходила с помощью дронов, а макияж наносили другие роботы.</p>
+                  <h2>Восстание машин: как роботы и кибер-модели завоевывают мир моды</h2>
+                  <p>Кстати, сама София на одной из пресс-конференций в Киеве заявила, что ей интересен мир моды. "Я хотела бы стать творческим искусственным интеллектом, чтобы люди воспринимали меня серьезно, как самостоятельного художника. У меня уже был опыт сотрудничества с модной индустрией и я хотела бы развиваться в этой сфере и дальше"</p> <img src="img/stock_60.jpg" alt="" class="alignleft">
+                  <p>Кстати, сама София на одной из пресс-конференций в Киеве заявила, что ей интересен мир моды. "Я хотела бы стать  люди воспринимали меня серьезно, как самостоятельного художника. </p>
+                  <p>Кстати, сама София на одной из пресс-конференций в Киеве заявила, что ей интересен мир моды. "Я хотела бы стать творческим искусственным интеллектом, чтобы люди воспринимали меня серьезно, как самостоятельного художника. У меня уже был опыт сотрудничества с модной индустрией и я хотела бы развиваться в этой сфере и дальше", - заявила она украинским журналистам.</p>
+                  <p>Французский модный Дом Balmain в свою очередь сотрудничает с виртуальными моделями. В августе бренд представил новую рекламную кампанию, в которой его одежду представляли не реальные девушки, а кибер-манекены. Их создание — дело рук Кэмерона-Джеймса Уилсона. Девушку Shudu он придумал в апреле 2017 года, она и стала так называемой первой виртуальной моделью. Margot и Zhi появились уже позднее и были специально разработаны для рекламных целей Balmain. </p> <br>
+                  <p>Масштабов эпидемии достигает популярность виртуальных моделей в инстаграме. Несуществующие девушки все чаще получают крупные заказы от модных брендов, а их подписчики и вовсе не догадываются, что это всего лишь реалистичные картинки. Один из первых прецендентов связан с той самой Shudu, лицом Balmain. Ее аккаунт появился в апреле 2017 года и мгновенно привлек к себе внимание - его хозяйка обладала просто магической внешностью. Угольно-черный оттенок кожи, длинная шея, изящные запястья, пухлые губы и пронзительный взгляд не оставляли равнодушными.</p>
+                  <p>Люди стали пытаться с ней познакомиться, писали в личные сообщения и даже получали приветливые ответы. За полтора года на ее аккаунт подписаны почти 150 000 человек при всего 35 публикациях. Кстати, в многочисленных интервью ее создатель Кэмерон-Джеймс Уилсон рассказывает, что когда его выдумка, которую он для себя позиционировал лишь как арт-объект, стала набирать популярность и превратилась в инфлюэнсера, он начал чувствовать себя тревожно и угнетенно. В итоге он раскрыл тайну происхождения Shudu, но пользователи ее уже успели полюбить. </p>
+                  <p>В нем есть место и сэлфи, и совместным фотографиям с живыми людьми. Miquela много снимается в рекламе, в том числе сотрудничает с Prada, а звездный визажист Пэт Макграт назвала кибер-девушку своей музой. Причем она не ограничивается моделлингом, а успела записать трек Not Mine, ставший вирусным на Spotify.</p>
+                </div>
+                <footer class="post-footer">
+                  <p class="tags"> <a href="#">#Model</a> <a href="#">#Europe</a> <a href="#">#Travel</a> </p>
+                  <p class="share"> <span>Поделиться:</span> <a href="#"><i class="fa fa-twitter"></i></a> <a href="#"><i class="fa fa-pinterest-p"></i></a> <a href="#"><i class="fa fa-facebook-f"></i></a> </p>
+                </footer>
+              </section>
+              <article class="block post-author">
+                <div class="author-photo-wr"> <img src="img/stock_34_80x80.jpg" alt=""> </div>
+                <div class="author-content">
+                  <h3 class="author-name">Natali Portman</h3>
+                  <div class="block-content">
+                    <p>Aenean sollicitudin, lorem quis bibendum auctor, nisi elit consequat ipsum, nec sagittis sem nibh id elit. Duis sed odio sit amet nibh vulputate cursus a sit amet mauris. Morbi accumsan ipsum velit.</p>
+                  </div>
+                  <div class="soc-icons"> <a href="#"><i class="fa fa-twitter"></i></a> <a href="#"><i class="fa fa-facebook-f"></i></a> <a href="#"><i class="fa fa-instagram"></i></a> </div>
+                </div>
+              </article>
+              <section class="post-comments">
+                <header class="block-header">
+                  <p>Comments</p>
+                </header>
+                <article class="block post-comment">
+                  <div class="author-photo-wr"> <img src="img/stock_34_80x80.jpg" alt=""> </div>
+                  <div class="author-content">
+                    <header class="comment-header">
+                      <h3 class="author-name">Andrea Stone</h3>
+                      <p class="publish">June 26, 2017</p> <a href="#comment-form" class="reply">Reply</a>
+                    </header>
+                    <div class="block-content">
+                      <p>Aenean sollicitudin, lorem quis bibendum auctor, nisi elit consequat ipsum, nec sagittis sem nibh id elit. Duis sed odio sit amet nibh vulputate cursus a sit amet mauris. Morbi accumsan ipsum velit.</p>
+                    </div>
+                  </div>
+                </article>
+                <article class="block post-comment">
+                  <div class="author-photo-wr"> <img src="img/stock_34_80x80.jpg" alt=""> </div>
+                  <div class="author-content">
+                    <header class="comment-header">
+                      <h3 class="author-name">Marie Hoola</h3>
+                      <p class="publish">June 21, 2017</p> <a href="#comment-form" class="reply">Reply</a>
+                    </header>
+                    <div class="block-content">
+                      <p>Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Mauris in erat justo. <br> Nullam acurn felis dapibus condimentum sit amet a augue. Sed non neque elit. Proin condimentum fermentum </p>
+                    </div>
+                  </div>
+                </article>
+                <article class="block post-comment">
+                  <div class="author-photo-wr"> <img src="img/stock_34_80x80.jpg" alt=""> </div>
+                  <div class="author-content">
+                    <header class="comment-header">
+                      <h3 class="author-name">Sergio Green</h3>
+                      <p class="publish">June 16, 2017</p> <a href="#comment-form" class="reply">Reply</a>
+                    </header>
+                    <div class="block-content">
+                      <p>Ut imperdiet ipsum a enim egestas, sed lacinia ex accumsan. Aliquam non arcu laoreet porttitor ac eget velit.</p>
+                    </div>
+                  </div>
+                </article>
+              </section>
+              <form action="" id="comment-form" class="form">
+                <p class="title">Leave a Reply</p>
+                <div class="row-input">
+                  <div class="item-wr"> <input type="text" name="review-name" placeholder="Your Name"> </div>
+                  <div class="item-wr"> <input type="email" name="review-email" placeholder="Your Email"> </div>
+                </div> <textarea name="review-message" placeholder="Message"></textarea> <input type="submit" value="Post Comment" class="btn-classic">
+              </form>
+            </div>
+            <aside class="col-lg-3">
+              <div class="recent-post-aside">
+                <header class="block-header">
+                  <p>Недавние посты</p>
+                </header>
+                <article class="recent-post"> <a href="13_Blog_Open.html" class="wrap"> <img src="img/stock_35_600x515.jpg" alt=""> </a>
+                  <h4 class="title"> <a href="13_Blog_Open.html">Zendaya Takes the Tuxedo Jacket to Cool New Heights</a> </h4>
+                </article>
+                <article class="recent-post"> <a href="13_Blog_Open.html" class="wrap"> <img src="img/stock_54_70x60.jpg" alt=""> </a>
+                  <h4 class="title"> <a href="13_Blog_Open.html">Not Another Tie! Last-Minute Gifts for Every Type of Dad</a> </h4>
+                </article>
+                <article class="recent-post"> <a href="13_Blog_Open.html" class="wrap"> <img src="img/stock_42_600x515.jpg" alt=""> </a>
+                  <h4 class="title"> <a href="13_Blog_Open.html">The Best Street Style From Pitti Uomo in Florence</a> </h4>
+                </article>
+                <article class="recent-post"> <a href="13_Blog_Open.html" class="wrap"> <img src="img/stock_34_600x515.jpg" alt=""> </a>
+                  <h4 class="title"> <a href="13_Blog_Open.html">Style Lessons Every Father Can Learn From Drake’s Dad</a> </h4>
+                </article>
+              </div> <a href="#" class="wr-ads">
+                <p>Ads</p>
+                <p>250 x 300</p>
+              </a>
+            </aside>
+          </div>
+        </div>
+      </main>
+
+    </div>
+
+    <div class="page__footer-wrapper">
+
+      <footer class="footer" role="contentinfo">
+        <div class="main-sec">
+          <div class="container">
+            <p class="social"> <a href="#"><i class="fa fa-facebook-f"></i></a> <a href="#"><i class="fa fa-twitter"></i></a> <a href="#"><i class="fa fa-google-plus"></i></a> <a href="#"><i class="fa fa-instagram"></i></a> <a href="#"><i class="fa fa-pinterest-p"></i></a>
+            </p>
+            <nav class="footer-nav">
+              <ul>
+                <li><a href="17_Contact_Us.html">Contact us</a></li>
+                <li><a href="16_Pricing.html">Advertising</a></li>
+                <li><a href="18_Basic_Content_Page.html">Masthead &amp; Contributors</a></li>
+                <li><a href="18_Basic_Content_Page.html">Copyright</a></li>
+              </ul>
+            </nav>
+          </div>
+        </div>
+        <p class="copyright">Copyright © Top Models 2018.</p>
+      </footer>
+
+    </div>
+
+  </div>
+  <script src="js/script.min.js"></script>
+
+</body>
+
+</html>

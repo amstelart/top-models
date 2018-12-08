@@ -1,0 +1,391 @@
+<!DOCTYPE html>
+<html class="no-js  page" lang="ru">
+
+<head>
+  <meta charset="utf-8">
+  <title>Green Park</title>
+  <meta name="description" content=""> <!--DEV Такой комментарий не попадет в собранный HTML
+<meta name="viewport" content="width=1000">
+-->
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="format-detection" content="telephone=no">
+
+<link href="css/style.min.css" rel="stylesheet" media="screen">
+
+<link rel="icon" type="image/png" sizes="32x32" href="img/favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="16x16" href="img/favicon-16x16.png">
+<link rel="shortcut icon" href="img/favicon.ico">
+
+<script>
+  // Маркер работающего javascript
+  document.documentElement.className = document.documentElement.className.replace('no-js', 'js');
+  document.addEventListener('DOMContentLoaded', function(){
+    if (window.isMobile !== undefined) {
+      // console.log(isMobile);
+      if(isMobile.any) {
+        var rootClasses = ' is-mobile';
+        for (key in isMobile) {
+          if(typeof isMobile[key] === 'boolean' && isMobile[key] && key !== 'any') rootClasses += ' is-mobile--'+key;
+          if(typeof isMobile[key] === 'object' && key !== 'other') {
+            for (type in isMobile[key]) {
+              if(isMobile[key][type]) rootClasses += ' is-mobile--'+key+'-'+type;
+            }
+          }
+        }
+        document.documentElement.className += rootClasses;
+      }
+    }
+    else {
+      console.log('Классы для мобильных не добавлены: в сборке отсутствует isMobile.js');
+    }
+  });
+
+</script>
+
+</head>
+
+<body class="main">
+
+  <div class="page__inner">
+
+    <div class="page__content">
+
+      <header class="header" role="banner">
+        <div class="container">
+          <div class="header-inner">
+            <a href="index.html" class="site-logo">
+              <img width="180px" src="img/logo.svg" alt="">
+            </a>
+            <div class="navigation-wr">
+              <nav class="navigation">
+                <ul>
+                  <li class="menu-item-has-children current-menu-parent"> <a href="01_Home.html">Модели</a> <span class="sub-menu-toggle"></span>
+                    <ul class="sub-menu">
+                      <li><a href="01_Home.html">Dark with carousel</a></li>
+                      <li class="current-menu-item"><a href="03_Home.html">Dark with slider</a></li>
+                      <li><a href="02_Home_White.html">White version</a></li>
+                    </ul>
+                  </li>
+                  <li class="menu-item-has-children"> <a href="06_Models_Load_More.html">Стать моделью</a> <span class="sub-menu-toggle"></span>
+                    <ul class="sub-menu">
+                      <li><a href="06_Models_Load_More.html">Side version</a></li>
+                      <li><a href="08_Models_Map_View_Alternative.html">Side version 3 column</a></li>
+                    </ul>
+                  </li>
+                  <li class="menu-item-has-children"> <a href="blog-grid.html">Блог</a> <span class="sub-menu-toggle"></span>
+                    <ul class="sub-menu">
+                      <li><a href="blog-grid.html">Модели</a></li>
+                      <li><a href="blog-grid.html">Фотосессия</a></li>
+                      <li><a href="blog-grid.html">Подиум</a></li>
+                    </ul>
+                  </li>
+                  <li class="menu-item-has-children"> <a href="18_Basic_Content_Page.html">Контакты</a> <span class="sub-menu-toggle"></span>
+                    <ul class="sub-menu">
+                      <li><a href="12_Blog_Grid.html">Blog Grid</a></li>
+                      <li><a href="13_Blog_Open.html">Blog open</a></li>
+                      <li><a href="18_Basic_Content_Page.html">Basic content</a></li>
+                      <li><a href="19_Basic_Content_Page_Alternative.html">Basic content alt</a></li>
+                      <li><a href="05_Model_Profile.html">Model profile</a></li>
+                      <li><a href="15_FAQ.html">FAQ</a></li>
+                      <li><a href="21_Sign_Up.html">Register</a></li>
+                      <li><a href="20_Log_In.html">Sign In</a></li>
+                    </ul>
+                  </li>
+                </ul>
+              </nav>
+              <div class="right-sec-nav d-flex align-items-center">
+                <form class="search-wr">
+                  <input type="text" id="search" name="search"> <i class="fa fa-search" aria-hidden="true"></i> <input type="submit" class="submit" value="">
+                </form>
+                <div class="lang-menu-wr">
+                  <button class="btn lang-toggle">
+                    <span>RU</span> <i class="fa fa-caret-down" aria-hidden="true"></i>
+                  </button>
+                  <ul class="lang-menu">
+                    <li><a href="#">RU</a></li>
+                    <li><a href="#">EN</a></li>
+                  </ul>
+                </div>
+              </div>
+              <i class="fa fa-times" aria-hidden="true"></i>
+            </div>
+            <i class="fa fa-bars" aria-hidden="true"></i>
+          </div>
+        </div>
+      </header>
+
+
+      <main role="main">
+
+        <div class="hero-slider-wr default-slick-button slick-slider">
+          <div class="hero-slider slick-slide" style="background-image: url('img/stock_21.jpg')">
+            <div class="container">
+              <div class="hero-slider-inner">
+                <h1 class="slider-title">Заголовок слайдера</h1>
+                <p class="sub-title">Масштабов эпидемии достигает популярность виртуальных моделей в инстаграме. Несуществующие девушки все чаще получают крупные заказы от модных брендов.</p> <a href="#" class="btn-classic" tabindex="-1">Далее</a>
+              </div>
+            </div>
+          </div>
+          <div class="hero-slider slick-slide" style="background-image: url('img/stock_56.jpg')">
+            <div class="container">
+              <div class="hero-slider-inner">
+                <h1 class="slider-title">Заголовок слайдера</h1>
+                <p class="sub-title">Масштабов эпидемии достигает популярность виртуальных моделей в инстаграме. Несуществующие девушки все чаще получают крупные заказы от модных брендов.</p> <a href="#" class="btn-classic" tabindex="-1">Далее</a>
+              </div>
+            </div>
+          </div>
+          <div class="hero-slider slick-slide" style="background-image: url('img/stock_41.jpg')">
+            <div class="container">
+              <div class="hero-slider-inner">
+                <h1 class="slider-title">Заголовок слайдера</h1>
+                <p class="sub-title">Масштабов эпидемии достигает популярность виртуальных моделей в инстаграме. Несуществующие девушки все чаще получают крупные заказы от модных брендов.</p> <a href="#" class="btn-classic" tabindex="-1">Далее</a>
+              </div>
+            </div>
+          </div>
+          <div class="hero-slider slick-slide" style="background-image: url('img/stock_21.jpg')">
+            <div class="container">
+              <div class="hero-slider-inner">
+                <h1 class="slider-title">Заголовок слайдера</h1>
+                <p class="sub-title">Duis sed odio sit amet nibh vulputate cursus a sit amet mauris morbi accumsan ipsum velit. Nam nec tellus a odio tincidunt auctor a ornare.</p> <a href="#" class="btn-classic" tabindex="-1">Далее</a>
+              </div>
+            </div>
+          </div>
+          <div class="hero-slider slick-slide" style="background-image: url('img/stock_56.jpg')">
+            <div class="container">
+              <div class="hero-slider-inner">
+                <h1 class="slider-title">Заголовок слайдера</h1>
+                <p class="sub-title">Duis sed odio sit amet nibh vulputate cursus a sit amet mauris morbi accumsan ipsum velit. Nam nec tellus a odio tincidunt auctor a ornare.</p> <a href="#" class="btn-classic" tabindex="-1">Далее</a>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="popular-models items-list container">
+          <header class="block-header">
+            <p>Популярные модели</p> <a href="#">Увидеть все<i class="fa fa-plus" aria-hidden="true"></i></a>
+          </header>
+          <div class="models-wr">
+            <div class="item-wr">
+              <a href="#" class="model-item" style="background-image: url('img/stock_05.jpg')">
+                <div class="model-info">
+                  <p>Возраст: <span>25</span></p>
+                  <p>Рост: <span>179</span></p>
+                  <p>Бюст: <span>85</span></p>
+                  <p>Волосы: <span>Блонд</span></p>
+                  <p>Глаза: <span>Зеленые</span></p>
+                  <p><i class="fa fa-star active" aria-hidden="true"></i> <i class="fa fa-star active" aria-hidden="true"></i> <i class="fa fa-star active" aria-hidden="true"></i> <i class="fa fa-star active" aria-hidden="true"></i> <i class="fa fa-star" aria-hidden="true"></i> </p>
+                </div>
+                <p class="title">Мария Сидорина</p>
+              </a>
+            </div>
+            <div class="item-wr">
+              <a href="#" class="model-item" style="background-image: url('img/stock_23.jpg')">
+                <div class="model-info">
+                  <p>Возраст: <span>25</span></p>
+                  <p>Рост: <span>179</span></p>
+                  <p>Бюст: <span>85</span></p>
+                  <p>Волосы: <span>Блонд</span></p>
+                  <p>Глаза: <span>Зеленые</span></p>
+                  <p><i class="fa fa-star active" aria-hidden="true"></i> <i class="fa fa-star active" aria-hidden="true"></i> <i class="fa fa-star active" aria-hidden="true"></i> <i class="fa fa-star active" aria-hidden="true"></i> <i class="fa fa-star" aria-hidden="true"></i> </p>
+                </div>
+                <p class="title">Мария Сидорина</p>
+              </a>
+            </div>
+            <div class="item-wr">
+              <a href="#" class="model-item" style="background-image: url('img/stock_17.jpg')">
+                <div class="model-info">
+                  <p>Возраст: <span>25</span></p>
+                  <p>Рост: <span>179</span></p>
+                  <p>Бюст: <span>85</span></p>
+                  <p>Волосы: <span>Блонд</span></p>
+                  <p>Глаза: <span>Зеленые</span></p>
+                  <p><i class="fa fa-star active" aria-hidden="true"></i> <i class="fa fa-star active" aria-hidden="true"></i> <i class="fa fa-star active" aria-hidden="true"></i> <i class="fa fa-star active" aria-hidden="true"></i> <i class="fa fa-star" aria-hidden="true"></i> </p>
+                </div>
+                <p class="title">Анна Вонг</p>
+              </a>
+            </div>
+            <div class="item-wr">
+              <a href="#" class="model-item" style="background-image: url('img/stock_22.jpg')">
+                <div class="model-info">
+                  <p>Возраст: <span>25</span></p>
+                  <p>Рост: <span>179</span></p>
+                  <p>Бюст: <span>85</span></p>
+                  <p>Волосы: <span>Блонд</span></p>
+                  <p>Глаза: <span>Зеленые</span></p>
+                  <p><i class="fa fa-star active" aria-hidden="true"></i> <i class="fa fa-star active" aria-hidden="true"></i> <i class="fa fa-star active" aria-hidden="true"></i> <i class="fa fa-star active" aria-hidden="true"></i> <i class="fa fa-star" aria-hidden="true"></i> </p>
+                </div>
+                <p class="title">Михаил Филонов</p>
+              </a>
+            </div>
+            <div class="item-wr">
+              <a href="#" class="model-item" style="background-image: url('img/stock_10.jpg')">
+                <div class="model-info">
+                  <p>Возраст: <span>25</span></p>
+                  <p>Рост: <span>179</span></p>
+                  <p>Бюст: <span>85</span></p>
+                  <p>Волосы: <span>Блонд</span></p>
+                  <p>Глаза: <span>Зеленые</span></p>
+                  <p><i class="fa fa-star active" aria-hidden="true"></i> <i class="fa fa-star active" aria-hidden="true"></i> <i class="fa fa-star active" aria-hidden="true"></i> <i class="fa fa-star active" aria-hidden="true"></i> <i class="fa fa-star" aria-hidden="true"></i> </p>
+                </div>
+                <p class="title">Евгения Евсеева</p>
+              </a>
+            </div>
+            <div class="item-wr">
+              <a href="#" class="model-item" style="background-image: url('img/stock_05.jpg')">
+                <div class="model-info">
+                  <p>Возраст: <span>25</span></p>
+                  <p>Рост: <span>179</span></p>
+                  <p>Бюст: <span>85</span></p>
+                  <p>Волосы: <span>Блонд</span></p>
+                  <p>Глаза: <span>Зеленые</span></p>
+                  <p><i class="fa fa-star active" aria-hidden="true"></i> <i class="fa fa-star active" aria-hidden="true"></i> <i class="fa fa-star active" aria-hidden="true"></i> <i class="fa fa-star active" aria-hidden="true"></i> <i class="fa fa-star" aria-hidden="true"></i> </p>
+                </div>
+                <p class="title">Бля Волкова</p>
+              </a>
+            </div>
+            <div class="item-wr">
+              <a href="#" class="model-item" style="background-image: url('img/stock_23.jpg')">
+                <div class="model-info">
+                  <p>Возраст: <span>25</span></p>
+                  <p>Рост: <span>179</span></p>
+                  <p>Бюст: <span>85</span></p>
+                  <p>Волосы: <span>Блонд</span></p>
+                  <p>Глаза: <span>Зеленые</span></p>
+                  <p><i class="fa fa-star active" aria-hidden="true"></i> <i class="fa fa-star active" aria-hidden="true"></i> <i class="fa fa-star active" aria-hidden="true"></i> <i class="fa fa-star active" aria-hidden="true"></i> <i class="fa fa-star" aria-hidden="true"></i> </p>
+                </div>
+                <p class="title">Лайма Ирбис</p>
+              </a>
+            </div>
+            <div class="item-wr">
+              <a href="#" class="model-item" style="background-image: url('img/stock_17.jpg')">
+                <div class="model-info">
+                  <p>Возраст: <span>25</span></p>
+                  <p>Рост: <span>179</span></p>
+                  <p>Бюст: <span>85</span></p>
+                  <p>Волосы: <span>Блонд</span></p>
+                  <p>Глаза: <span>Зеленые</span></p>
+                  <p><i class="fa fa-star active" aria-hidden="true"></i> <i class="fa fa-star active" aria-hidden="true"></i> <i class="fa fa-star active" aria-hidden="true"></i> <i class="fa fa-star active" aria-hidden="true"></i> <i class="fa fa-star" aria-hidden="true"></i> </p>
+                </div>
+                <p class="title">Стас Гурьев</p>
+              </a>
+            </div>
+            <div class="item-wr">
+              <a href="#" class="model-item" style="background-image: url('img/stock_22.jpg')">
+                <div class="model-info">
+                  <p>Возраст: <span>25</span></p>
+                  <p>Рост: <span>179</span></p>
+                  <p>Бюст: <span>85</span></p>
+                  <p>Волосы: <span>Блонд</span></p>
+                  <p>Глаза: <span>Зеленые</span></p>
+                  <p><i class="fa fa-star active" aria-hidden="true"></i> <i class="fa fa-star active" aria-hidden="true"></i> <i class="fa fa-star active" aria-hidden="true"></i> <i class="fa fa-star active" aria-hidden="true"></i> <i class="fa fa-star" aria-hidden="true"></i> </p>
+                </div>
+                <p class="title">Илона Князева</p>
+              </a>
+            </div>
+            <div class="item-wr">
+              <a href="#" class="model-item" style="background-image: url('img/stock_10.jpg')">
+                <div class="model-info">
+                  <p>Возраст: <span>25</span></p>
+                  <p>Рост: <span>179</span></p>
+                  <p>Бюст: <span>85</span></p>
+                  <p>Волосы: <span>Блонд</span></p>
+                  <p>Глаза: <span>Зеленые</span></p>
+                  <p><i class="fa fa-star active" aria-hidden="true"></i> <i class="fa fa-star active" aria-hidden="true"></i> <i class="fa fa-star active" aria-hidden="true"></i> <i class="fa fa-star active" aria-hidden="true"></i> <i class="fa fa-star" aria-hidden="true"></i> </p>
+                </div>
+                <p class="title">Анастасия Мельникова</p>
+              </a>
+            </div>
+          </div>
+        </div>
+        <section class="full-width" style="background-image: url('img/stock_21.jpg')">
+          <div class="container">
+            <div class="full-width-inner">
+              <h2 class="title">Стань Суперзвездой</h2>
+              <p class="sub-title">Для также даже, что автор ODIO tincidunt Элит футбольной ненависти. Но это не автор жизни, и был consequat маки, ни в профессиональном футболе. Для клинического массажа.</p> <a href="21_Sign_Up.html" class="btn-classic">Применить сейчас</a>
+            </div>
+          </div>
+        </section>
+        <section class="testimon-section container">
+          <div class="row">
+            <div class="col-lg-6">
+              <div class="testimon">
+                <p class="testimon-content">Класс начал Employment поворот на наш брак, за himenaeos.</p>
+                <p class="testimon-author">Адриана Лима  <br> Французская Супермодель</p>
+              </div>
+            </div>
+            <div class="col-lg-6"> <a href="#" class="wr-ads">
+                <p>Баннер</p>
+                <p>570 x 212</p>
+              </a> </div>
+          </div>
+        </section>
+        <div class="recent-posts items-list container">
+          <header class="block-header">
+            <p>Недавние Посты</p> <a href="blog-grid.html">Больше сообщений<i class="fa fa-angle-right"></i></a>
+          </header>
+          <div class="row">
+            <div class="col-md-4">
+              <div class="recent-posts-item">
+                <a href="blog-post.html" class="post-img-wr">
+                  <img src="img/stock_53.jpg" alt=""> <span class="label">Фотосессия</span>
+                </a>
+                <a href="blog-post.html" class="title no-decoration">
+                  Восстание машин: как роботы и кибер-модели завоевывают мир моды</a>
+                <p class="publish-age">4 days ago<span class="separator">•</span><i class="fa fa-eye"></i> 1570</p>
+              </div>
+            </div>
+            <div class="col-md-4">
+              <div class="recent-posts-item">
+                <a href="blog-post.html" class="post-img-wr">
+                  <img src="img/stock_35.jpg" alt=""> <span class="label">Подиум</span>
+                </a>
+                <a href="blog-post.html" class="title no-decoration">
+                  Новое лицо: Кайя Гербер стала посланницей YSL Makeup</a>
+                <p class="publish-age">4 days ago<span class="separator">•</span><i class="fa fa-eye"></i> 1570</p>
+              </div>
+            </div>
+            <div class="col-md-4">
+              <div class="recent-posts-item">
+                <a href="blog-post.html" class="post-img-wr">
+                  <img src="img/stock_54.jpg" alt=""> <span class="label">Модели</span>
+                </a>
+                <a href="blog-post.html" class="title no-decoration">
+                  Аллея: самые эксцентричные вещи из осенних коллекций на улицах Киева</a>
+                <p class="publish-age">4 days ago<span class="separator">•</span><i class="fa fa-eye"></i> 1570</p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+      </main>
+
+    </div>
+
+    <div class="page__footer-wrapper">
+
+      <footer class="footer" role="contentinfo">
+        <div class="main-sec">
+          <div class="container">
+            <p class="social"> <a href="#"><i class="fa fa-facebook-f"></i></a> <a href="#"><i class="fa fa-twitter"></i></a> <a href="#"><i class="fa fa-google-plus"></i></a> <a href="#"><i class="fa fa-instagram"></i></a> <a href="#"><i class="fa fa-pinterest-p"></i></a>
+            </p>
+            <nav class="footer-nav">
+              <ul>
+                <li><a href="17_Contact_Us.html">Contact us</a></li>
+                <li><a href="16_Pricing.html">Advertising</a></li>
+                <li><a href="18_Basic_Content_Page.html">Masthead &amp; Contributors</a></li>
+                <li><a href="18_Basic_Content_Page.html">Copyright</a></li>
+              </ul>
+            </nav>
+          </div>
+        </div>
+        <p class="copyright">Copyright © Top Models 2018.</p>
+      </footer>
+
+    </div>
+
+  </div>
+  <script src="js/script.min.js"></script>
+
+</body>
+
+</html>
