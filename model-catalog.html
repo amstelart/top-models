@@ -1,0 +1,284 @@
+<!DOCTYPE html>
+<html class="no-js  page" lang="ru">
+
+<head>
+  <meta charset="utf-8">
+  <title>TOP - Model School&Agency</title>
+  <meta name="description" content=""> <!--DEV Такой комментарий не попадет в собранный HTML
+<meta name="viewport" content="width=1000">
+-->
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="format-detection" content="telephone=no">
+
+<link href="css/style.min.css" rel="stylesheet" media="screen">
+
+<!-- <link rel="icon" type="image/png" sizes="32x32" href="img/favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="16x16" href="img/favicon-16x16.png">
+<link rel="shortcut icon" href="img/favicon.ico"> -->
+
+<script>
+  // Маркер работающего javascript
+  document.documentElement.className = document.documentElement.className.replace('no-js', 'js');
+  document.addEventListener('DOMContentLoaded', function(){
+    if (window.isMobile !== undefined) {
+      // console.log(isMobile);
+      if(isMobile.any) {
+        var rootClasses = ' is-mobile';
+        for (key in isMobile) {
+          if(typeof isMobile[key] === 'boolean' && isMobile[key] && key !== 'any') rootClasses += ' is-mobile--'+key;
+          if(typeof isMobile[key] === 'object' && key !== 'other') {
+            for (type in isMobile[key]) {
+              if(isMobile[key][type]) rootClasses += ' is-mobile--'+key+'-'+type;
+            }
+          }
+        }
+        document.documentElement.className += rootClasses;
+      }
+    }
+    else {
+      console.log('Классы для мобильных не добавлены: в сборке отсутствует isMobile.js');
+    }
+  });
+
+</script>
+
+</head>
+
+<body class="main">
+
+  <div class="page__inner">
+
+    <div class="page__content">
+
+      <header class="header" role="banner">
+        <div class="container">
+          <div class="header-inner">
+            <a href="index.html" class="site-logo">
+              <img width="180px" src="img/logo.svg" alt="">
+            </a>
+            <div class="navigation-wr">
+              <nav class="navigation">
+                <ul>
+                  <li class="menu-item-has-children current-menu-parent"> <a href="01_Home.html">Модели</a> <span class="sub-menu-toggle"></span>
+                    <ul class="sub-menu">
+                      <li><a href="01_Home.html">Dark with carousel</a></li>
+                      <li class="current-menu-item"><a href="03_Home.html">Dark with slider</a></li>
+                      <li><a href="02_Home_White.html">White version</a></li>
+                    </ul>
+                  </li>
+                  <li class="menu-item-has-children"> <a href="06_Models_Load_More.html">Стать моделью</a> <span class="sub-menu-toggle"></span>
+                    <ul class="sub-menu">
+                      <li><a href="06_Models_Load_More.html">Side version</a></li>
+                      <li><a href="08_Models_Map_View_Alternative.html">Side version 3 column</a></li>
+                    </ul>
+                  </li>
+                  <li class="menu-item-has-children"> <a href="blog-grid.html">Блог</a> <span class="sub-menu-toggle"></span>
+                    <ul class="sub-menu">
+                      <li><a href="blog-grid.html">Модели</a></li>
+                      <li><a href="blog-grid.html">Фотосессия</a></li>
+                      <li><a href="blog-grid.html">Подиум</a></li>
+                    </ul>
+                  </li>
+                  <li class="menu-item-has-children">
+                    <a href="contacts.html">Контакты</a>
+                  </li>
+                </ul>
+              </nav>
+              <div class="right-sec-nav d-flex align-items-center">
+                <form class="search-wr">
+                  <input type="text" id="search" name="search"> <i class="fa fa-search" aria-hidden="true"></i> <input type="submit" class="submit" value="">
+                </form>
+                <div class="lang-menu-wr">
+                  <button class="btn lang-toggle">
+                    <span>RU</span> <i class="fa fa-caret-down" aria-hidden="true"></i>
+                  </button>
+                  <ul class="lang-menu">
+                    <li><a href="#">RU</a></li>
+                    <li><a href="#">EN</a></li>
+                  </ul>
+                </div>
+              </div>
+              <i class="fa fa-times" aria-hidden="true"></i>
+            </div>
+            <i class="fa fa-bars" aria-hidden="true"></i>
+          </div>
+        </div>
+      </header>
+
+
+      <main role="main">
+        <div class="container sort-models-wrapper">
+          <div class="sort-models-header">
+            <header> <span class="title">Сортировать по:</span>
+              <div class="select-wr"> <span class="select-item"> <select name="age&quot;&quot;" id="age">
+                <option value="0">Возраст</option>
+                <option value="18">18</option>
+                <option value="19">19</option>
+                <option value="20">20</option>
+              </select> </span> <span class="select-item"> <select name="height" id="height">
+                <option value="0">Рост</option>
+                <option value="150">150</option>
+                <option value="155">155</option>
+                <option value="160">160</option>
+              </select> </span> <span class="select-item"> <select name="bust" id="bust">
+                <option value="0">Бюст</option>
+                <option value="45">45</option>
+                <option value="50">50</option>
+                <option value="55">55</option>
+              </select> </span> <span class="select-item"> <select name="hair" id="hair">
+                <option value="0">Волосы</option>
+                <option value="blonde">Блонд</option>
+                <option value="black">Black</option>
+                <option value="brown">Brown</option>
+              </select> </span> <span class="select-item"> <select name="age" id="eyes">
+                <option value="0">Глаза</option>
+                <option value="blue">Голубые</option>
+                <option value="green">Зеленые</option>
+                <option value="brown">Карие</option>
+              </select> </span> <span class="select-item"> <select name="rating" id="rating">
+                <option value="0">Рейтинг</option>
+                <option value="1">1</option>
+                <option value="2">2</option>
+                <option value="3">3</option>
+                <option value="4">4</option>
+                <option value="5">5</option>
+              </select> </span> </div>
+              <div class="search-agency-wr">
+                <form action="" id="search-agancy"> <label><input type="text" name="agancy"></label> </form>
+              </div>
+            </header>
+          </div>
+          <div class="sort-models">
+            <div class="row">
+              <div class="col-md-6 col-lg-6 col-xl-4 sort-models-item-wr">
+                <a href="model-profile.html" class="sort-models-item no-decoration">
+                  <div class="img-wr">
+                    <div class="sort-model-img" style="background-image: url('img/stock_17_640x960.jpg')"> </div>
+                  </div>
+                  <div class="model-info">
+                    <p>Возраст: <span>25</span></p>
+                    <p>Рост: <span>179</span></p>
+                    <p>Бюст: <span>85</span></p>
+                    <p>Волосы: <span>Блонд</span></p>
+                    <p>Глаза: <span>Зеленые</span></p>
+                    <p><i class="fa fa-star active" aria-hidden="true"></i> <i class="fa fa-star active" aria-hidden="true"></i> <i class="fa fa-star active" aria-hidden="true"></i> <i class="fa fa-star active" aria-hidden="true"></i> <i class="fa fa-star" aria-hidden="true"></i> </p>
+                  </div>
+                </a>
+              </div>
+              <div class="col-md-6 col-lg-6 col-xl-4 sort-models-item-wr">
+                <a href="model-profile.html" class="sort-models-item no-decoration">
+                  <div class="img-wr">
+                    <div class="sort-model-img" style="background-image: url('img/stock_23_1170x1290.jpg')"></div>
+                  </div>
+                  <div class="model-info">
+                    <p>Возраст: <span>25</span></p>
+                    <p>Рост: <span>179</span></p>
+                    <p>Бюст: <span>85</span></p>
+                    <p>Волосы: <span>Блонд</span></p>
+                    <p>Глаза: <span>Зеленые</span></p>
+                    <p><i class="fa fa-star active" aria-hidden="true"></i> <i class="fa fa-star active" aria-hidden="true"></i> <i class="fa fa-star active" aria-hidden="true"></i> <i class="fa fa-star active" aria-hidden="true"></i> <i class="fa fa-star" aria-hidden="true"></i> </p>
+                  </div>
+                </a>
+              </div>
+              <div class="col-md-6 col-lg-6 col-xl-4 sort-models-item-wr">
+                <a href="model-profile.html" class="sort-models-item no-decoration">
+                  <div class="img-wr">
+                    <div class="sort-model-img" style="background-image: url('img/stock_05_1200x1800.jpg')"></div>
+                  </div>
+                  <div class="model-info">
+                    <p>Возраст: <span>25</span></p>
+                    <p>Рост: <span>179</span></p>
+                    <p>Бюст: <span>85</span></p>
+                    <p>Волосы: <span>Блонд</span></p>
+                    <p>Глаза: <span>Зеленые</span></p>
+                    <p><i class="fa fa-star active" aria-hidden="true"></i> <i class="fa fa-star active" aria-hidden="true"></i> <i class="fa fa-star active" aria-hidden="true"></i> <i class="fa fa-star active" aria-hidden="true"></i> <i class="fa fa-star" aria-hidden="true"></i> </p>
+                  </div>
+                </a>
+              </div>
+              <div class="col-md-6 col-lg-6 col-xl-4 sort-models-item-wr">
+                <a href="model-profile.html" class="sort-models-item no-decoration">
+                <div class="img-wr">
+                  <div class="sort-model-img" style="background-image: url('img/stock_23.jpg')"></div>
+                </div>
+                <div class="model-info">
+                  <h2 class="title">Alice Amela</h2>
+                  <p>Age: <span>25</span></p>
+                  <p>Height: <span>185</span></p>
+                  <p>Bust: <span>90</span></p>
+                  <p>Hair: <span>Ginger</span></p>
+                  <p>Eyes: <span>Brown</span></p>
+                  <p> <i class="fa fa-star active" aria-hidden="true"></i> <i class="fa fa-star active" aria-hidden="true"></i> <i class="fa fa-star active" aria-hidden="true"></i> <i class="fa fa-star active" aria-hidden="true"></i> <i class="fa fa-star active"
+                    aria-hidden="true"></i> </p>
+                  </div>
+                </a>
+              </div>
+              <div class="col-md-6 col-lg-6 col-xl-4 sort-models-item-wr">
+                <a href="model-profile.html" class="sort-models-item no-decoration">
+                <div class="img-wr">
+                  <div class="sort-model-img" style="background-image: url('img/stock_22_1170x1170.jpg')"></div>
+                </div>
+                <div class="model-info">
+                  <h2 class="title">Donald Stone</h2>
+                  <p>Age: <span>24</span></p>
+                  <p>Height: <span>181</span></p>
+                  <p>Bust: <span>34</span></p>
+                  <p>Hair: <span>Black</span></p>
+                  <p>Eyes: <span>Green</span></p>
+                  <p> <i class="fa fa-star active" aria-hidden="true"></i> <i class="fa fa-star active" aria-hidden="true"></i> <i class="fa fa-star active" aria-hidden="true"></i> <i class="fa fa-star" aria-hidden="true"></i> <i class="fa fa-star"
+                    aria-hidden="true"></i> </p>
+                  </div>
+                </a>
+              </div>
+              <div class="col-md-6 col-lg-6 col-xl-4 sort-models-item-wr">
+                <a href="model-profile.html" class="sort-models-item no-decoration">
+                <div class="img-wr">
+                  <div class="sort-model-img" style="background-image: url('img/stock_48.png')"></div>
+                </div>
+                <div class="model-info">
+                  <h2 class="title">Natalie Porta</h2>
+                  <p>Age: <span>21</span></p>
+                  <p>Height: <span>185</span></p>
+                  <p>Bust: <span>85</span></p>
+                  <p>Hair: <span>Blond</span></p>
+                  <p>Eyes: <span>Blue</span></p>
+                  <p> <i class="fa fa-star active" aria-hidden="true"></i> <i class="fa fa-star active" aria-hidden="true"></i> <i class="fa fa-star active" aria-hidden="true"></i> <i class="fa fa-star active" aria-hidden="true"></i> <i class="fa fa-star active"
+                    aria-hidden="true"></i> </p>
+                  </div>
+                </a>
+              </div>
+            </div>
+            <p class="text-center"> <button class="btn-classic load-more">Показать еще <i class="fa fa-plus" aria-hidden="true"></i></button> </p>
+          </div>
+        </div>
+      </main>
+
+    </div>
+
+    <div class="page__footer-wrapper">
+
+      <footer class="footer" role="contentinfo">
+        <div class="main-sec">
+          <div class="container">
+            <p class="social"> <a href="#"><i class="fa fa-facebook-f"></i></a> <a href="#"><i class="fa fa-twitter"></i></a> <a href="#"><i class="fa fa-google-plus"></i></a> <a href="#"><i class="fa fa-instagram"></i></a> <a href="#"><i class="fa fa-pinterest-p"></i></a>
+            </p>
+            <nav class="footer-nav">
+              <ul>
+                <li><a href="17_Contact_Us.html">Contact us</a></li>
+                <li><a href="16_Pricing.html">Advertising</a></li>
+                <li><a href="18_Basic_Content_Page.html">Masthead &amp; Contributors</a></li>
+                <li><a href="18_Basic_Content_Page.html">Copyright</a></li>
+              </ul>
+            </nav>
+          </div>
+        </div>
+        <p class="copyright">Copyright © TOP - Model School&Agency 2018.</p>
+      </footer>
+
+    </div>
+
+  </div>
+  <script src="js/script.min.js"></script>
+
+</body>
+
+</html>

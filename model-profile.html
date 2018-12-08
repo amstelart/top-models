@@ -1,0 +1,309 @@
+<!DOCTYPE html>
+<html class="no-js  page" lang="ru">
+
+<head>
+  <meta charset="utf-8">
+  <title>TOP - Model School&Agency</title>
+  <meta name="description" content=""> <!--DEV Такой комментарий не попадет в собранный HTML
+<meta name="viewport" content="width=1000">
+-->
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="format-detection" content="telephone=no">
+
+<link href="css/style.min.css" rel="stylesheet" media="screen">
+
+<!-- <link rel="icon" type="image/png" sizes="32x32" href="img/favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="16x16" href="img/favicon-16x16.png">
+<link rel="shortcut icon" href="img/favicon.ico"> -->
+
+<script>
+  // Маркер работающего javascript
+  document.documentElement.className = document.documentElement.className.replace('no-js', 'js');
+  document.addEventListener('DOMContentLoaded', function(){
+    if (window.isMobile !== undefined) {
+      // console.log(isMobile);
+      if(isMobile.any) {
+        var rootClasses = ' is-mobile';
+        for (key in isMobile) {
+          if(typeof isMobile[key] === 'boolean' && isMobile[key] && key !== 'any') rootClasses += ' is-mobile--'+key;
+          if(typeof isMobile[key] === 'object' && key !== 'other') {
+            for (type in isMobile[key]) {
+              if(isMobile[key][type]) rootClasses += ' is-mobile--'+key+'-'+type;
+            }
+          }
+        }
+        document.documentElement.className += rootClasses;
+      }
+    }
+    else {
+      console.log('Классы для мобильных не добавлены: в сборке отсутствует isMobile.js');
+    }
+  });
+
+</script>
+
+</head>
+
+<body class="main">
+
+  <div class="page__inner">
+
+    <div class="page__content">
+
+      <header class="header" role="banner">
+        <div class="container">
+          <div class="header-inner">
+            <a href="index.html" class="site-logo">
+              <img width="180px" src="img/logo.svg" alt="">
+            </a>
+            <div class="navigation-wr">
+              <nav class="navigation">
+                <ul>
+                  <li class="menu-item-has-children current-menu-parent"> <a href="01_Home.html">Модели</a> <span class="sub-menu-toggle"></span>
+                    <ul class="sub-menu">
+                      <li><a href="01_Home.html">Dark with carousel</a></li>
+                      <li class="current-menu-item"><a href="03_Home.html">Dark with slider</a></li>
+                      <li><a href="02_Home_White.html">White version</a></li>
+                    </ul>
+                  </li>
+                  <li class="menu-item-has-children"> <a href="06_Models_Load_More.html">Стать моделью</a> <span class="sub-menu-toggle"></span>
+                    <ul class="sub-menu">
+                      <li><a href="06_Models_Load_More.html">Side version</a></li>
+                      <li><a href="08_Models_Map_View_Alternative.html">Side version 3 column</a></li>
+                    </ul>
+                  </li>
+                  <li class="menu-item-has-children"> <a href="blog-grid.html">Блог</a> <span class="sub-menu-toggle"></span>
+                    <ul class="sub-menu">
+                      <li><a href="blog-grid.html">Модели</a></li>
+                      <li><a href="blog-grid.html">Фотосессия</a></li>
+                      <li><a href="blog-grid.html">Подиум</a></li>
+                    </ul>
+                  </li>
+                  <li class="menu-item-has-children">
+                    <a href="contacts.html">Контакты</a>
+                  </li>
+                </ul>
+              </nav>
+              <div class="right-sec-nav d-flex align-items-center">
+                <form class="search-wr">
+                  <input type="text" id="search" name="search"> <i class="fa fa-search" aria-hidden="true"></i> <input type="submit" class="submit" value="">
+                </form>
+                <div class="lang-menu-wr">
+                  <button class="btn lang-toggle">
+                    <span>RU</span> <i class="fa fa-caret-down" aria-hidden="true"></i>
+                  </button>
+                  <ul class="lang-menu">
+                    <li><a href="#">RU</a></li>
+                    <li><a href="#">EN</a></li>
+                  </ul>
+                </div>
+              </div>
+              <i class="fa fa-times" aria-hidden="true"></i>
+            </div>
+            <i class="fa fa-bars" aria-hidden="true"></i>
+          </div>
+        </div>
+      </header>
+
+
+      <main role="main">
+        <div class="container">
+          <div class="wrapper-breadcrumbs">
+            <div id="breadcrumbs"> <a href="#">Главная</a> <i class="fa fa-angle-right separator"></i> <a href="#">Модели</a> <i class="fa fa-angle-right separator"></i> <span class="breadcrumb-last">Анастасия Мельникова</span> </div>
+            <nav class="profile-nav-link"> <a href="#" class="previus"> <i class="fa fa-arrow-circle-o-left" aria-hidden="true"></i> </a> <a href="#" class="next"> <i class="fa fa-arrow-circle-o-right" aria-hidden="true"></i> </a> </nav>
+          </div>
+        </div>
+        <section class="profile-entry">
+          <div class="container">
+            <section class="row">
+              <div class="col-lg-6">
+                <div class="profile-image">
+                  <div class="profile-image-inner slick-slider">
+                    <div class="model-img-item slick-slide" style="background-image: url('img/stock_57_784x1024.jpg')"></div>
+                    <div class="model-img-item slick-slide" style="background-image: url('img/stock_58_808x1024.jpg')"></div>
+                    <div class="model-img-item slick-slide" style="background-image: url('img/stock_49_766x1024.jpg')"></div>
+                    <div class="model-img-item slick-slide" style="background-image: url('img/stock_50_766x1024.jpg')"></div>
+                    <div class="model-img-item slick-slide" style="background-image: url('img/stock_51_769x1024.jpg')"></div>
+                    <div class="model-img-item slick-slide" style="background-image: url('img/stock_44_769x1024.jpg')"></div>
+                    <div class="model-img-item slick-slide" style="background-image: url('img/stock_38_770x1024.jpg')"></div>
+                    <div class="model-img-item slick-slide" style="background-image: url('img/stock_36_769x1024.jpg')"></div>
+                  </div>
+                  <a href="#" class="btn-classic add-favorite"> <i class="fa fa-star" aria-hidden="true"></i> <span>Add to favorites</span> </a>
+                </div>
+              </div>
+              <div class="col-lg-6">
+                <div class="profile-info">
+                  <header class="profile-header">
+                    <h1 class="profile-title">Анастасия Мельникова</h1>
+                    <p class="soc-icons"> <a href="#"><i class="fa fa-instagram"></i></a> <a href="#"><i class="fa fa-facebook-f"></i></a> <a href="#"><i class="fa fa-twitter"></i></a> </p>
+                  </header>
+                  <div class="model-info">
+                    <p>Возраст: <span>25</span></p>
+                    <p>Рост: <span>179</span></p>
+                    <p>Бюст: <span>85</span></p>
+                    <p>Волосы: <span>Блонд</span></p>
+                    <p>Глаза: <span>Голубые</span></p>
+                    <p class="rating">
+                      <i class="fa fa-star active" aria-hidden="true"></i>
+                      <i class="fa fa-star active" aria-hidden="true"></i>
+                      <i class="fa fa-star active" aria-hidden="true"></i>
+                      <i class="fa fa-star active" aria-hidden="true"></i>
+                      <i class="fa fa-star" aria-hidden="true"></i>
+                    </p>
+                  </div>
+                  <a href="#" class="send-msg">
+                    <span>Send Privat message</span>
+                    <i class="fa fa-envelope" aria-hidden="true"></i>
+                  </a>
+                  <div class="model-description">
+                    <p><span style="color: white">BIO</span>: Aenean sollicitudin, lorem quis bibendum auctor, nisi elit consequat ipsum, nec sagittis sem nibh id elit. Duis sed odio sit amet nibh vulputate cursus a sit amet mauris. Morbi accumsan ipsum
+                      velit. Nam nec tellus a odio tincidunt auctor a ornare odio. Sed non mauris vitae erat consequat auctor eu in elit. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Mauris in erat justo.</p>
+                  </div>
+                </div>
+              </div>
+            </section>
+            <div class="profile-more-photos">
+              <header class="block-header">
+                <p>Фото</p> <a href="#">Смотреть все<i class="fa fa-plus" aria-hidden="true"></i></a>
+              </header>
+              <div class="profile-thumbnails-wr slick-slider">
+                <div class="item-wr slick-slide">
+                  <div class="profile-thumbnails" style="background-image: url('img/stock_57_784x1024.jpg')"> </div>
+                </div>
+                <div class="item-wr slick-slide">
+                  <div class="profile-thumbnails" style="background-image: url('img/stock_58_808x1024.jpg')"> </div>
+                </div>
+                <div class="item-wr slick-slide">
+                  <div class="profile-thumbnails" style="background-image: url('img/stock_49_766x1024.jpg')"> </div>
+                </div>
+                <div class="item-wr slick-slide">
+                  <div class="profile-thumbnails" style="background-image: url('img/stock_50_766x1024.jpg')"> </div>
+                </div>
+                <div class="item-wr slick-slide">
+                  <div class="profile-thumbnails" style="background-image: url('img/stock_51_769x1024.jpg')"> </div>
+                </div>
+                <div class="item-wr slick-slide">
+                  <div class="profile-thumbnails" style="background-image: url('img/stock_44_769x1024.jpg')"> </div>
+                </div>
+                <div class="item-wr slick-slide">
+                  <div class="profile-thumbnails" style="background-image: url('img/stock_38_770x1024.jpg')"> </div>
+                </div>
+                <div class="item-wr slick-slide">
+                  <div class="profile-thumbnails" style="background-image: url('img/stock_36_769x1024.jpg')"> </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+        <section class="profile-reviews container">
+          <div class="row">
+            <aside class="col-lg-3 sidebar">
+              <header class="block-header">
+                <p>Agency</p>
+              </header> <a href="11_Agancy_Profile.html" class="agancy-logo">
+                <p>Logo</p>
+                <p>goes here</p>
+              </a>
+              <div class="model-contacts">
+                <p class="place"> <i class="fa fa-map-marker" aria-hidden="true"></i> <span>251 W 48th St, New York, NY 10036</span> </p>
+                <p class="phone"> <i class="fa fa-mobile" aria-hidden="true"></i> <a href="tel:+1 212-380-1195">+1 212-380-1195</a> </p>
+                <p class="info"> <i class="fa fa-envelope" aria-hidden="true"></i> <a href="mailto:support@topmodels.com">support@topmodels.com</a> </p>
+              </div>
+            </aside>
+            <section class="col-lg-9 order-lg-first">
+              <div class="rewiew-section">
+                <header class="block-header">
+                  <p>Recent Reviews</p>
+                </header>
+                <section class="all-review">
+                  <article class="review-item">
+                    <header class="review-header">
+                      <h3 class="review-author">Andrea Stone</h3>
+                      <p class="publish-date">June 6, 2017</p>
+                    </header>
+                    <div class="review-content">
+                      <p>I love your boho romper and dresses. Where did you get them all?</p>
+                    </div>
+                  </article>
+                  <article class="review-item">
+                    <header class="review-header">
+                      <h3 class="review-author">Marie Hoola</h3>
+                      <p class="rating"> <i class="fa fa-star active" aria-hidden="true"></i> <i class="fa fa-star active" aria-hidden="true"></i> <i class="fa fa-star active" aria-hidden="true"></i> <i class="fa fa-star active" aria-hidden="true"></i> <i
+                          class="fa fa-star" aria-hidden="true"></i> </p>
+                      <p class="publish-date">June 6, 2017</p>
+                    </header>
+                    <div class="review-content">
+                      <p>Proin gravida nibh vel velit auctor aliquet. Aenean sollicitudin, lorem quis bibendum auctor, nisi elit consequat ipsum nec sagittis sem nibh id elit. Duis sed odio sit amet nibh vulputate cursus a sit amet mauris. Morbi accumsan
+                        ipsum velit.</p>
+                    </div>
+                  </article>
+                  <article class="review-item">
+                    <header class="review-header">
+                      <h3 class="review-author">Sergio Green</h3>
+                      <p class="publish-date">June 6, 2017</p>
+                    </header>
+                    <div class="review-content">
+                      <p>Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Mauris in erat justo. Nullam acurn felis dapibus condimentum sit amet a augue. Sed non neque elit. Proin condimentum fermentum nunc. </p>
+                    </div>
+                  </article>
+                  <article class="review-item">
+                    <header class="review-header">
+                      <h3 class="review-author">Nataly Portman</h3>
+                      <p class="rating"> <i class="fa fa-star active" aria-hidden="true"></i> <i class="fa fa-star active" aria-hidden="true"></i> <i class="fa fa-star active" aria-hidden="true"></i> <i class="fa fa-star" aria-hidden="true"></i> <i class="fa fa-star"
+                          aria-hidden="true"></i> </p>
+                      <p class="publish-date">June 6, 2017</p>
+                    </header>
+                    <div class="review-content">
+                      <p>I am obsesseed with this dress omg!!</p>
+                    </div>
+                  </article>
+                </section>
+                <form action="" id="rate-form" class="form rate-form">
+                  <p class="title">Write Review</p>
+                  <p class="form-message error">Message should not be empty</p>
+                  <p class="form-message saccess">Message sent saccessfuly</p>
+                  <div class="rate-model">
+                    <p class="rating"> <i class="fa fa-star" aria-hidden="true"></i> <i class="fa fa-star" aria-hidden="true"></i> <i class="fa fa-star" aria-hidden="true"></i> <i class="fa fa-star" aria-hidden="true"></i> <i class="fa fa-star"
+                        aria-hidden="true"></i> </p> <span>Rate Model</span>
+                  </div>
+                  <div class="row-input">
+                    <div class="item-wr"> <input type="text" name="name" placeholder="Your Name" class="name"> </div>
+                    <div class="item-wr"> <input type="email" name="email" placeholder="Your Email" class="email"> </div>
+                  </div> <textarea name="review-message" placeholder="Message"></textarea> <input type="submit" value="Post Review" class="btn-classic">
+                </form>
+              </div>
+            </section>
+          </div>
+        </section>
+      </main>
+
+    </div>
+
+    <div class="page__footer-wrapper">
+
+      <footer class="footer" role="contentinfo">
+        <div class="main-sec">
+          <div class="container">
+            <p class="social"> <a href="#"><i class="fa fa-facebook-f"></i></a> <a href="#"><i class="fa fa-twitter"></i></a> <a href="#"><i class="fa fa-google-plus"></i></a> <a href="#"><i class="fa fa-instagram"></i></a> <a href="#"><i class="fa fa-pinterest-p"></i></a>
+            </p>
+            <nav class="footer-nav">
+              <ul>
+                <li><a href="17_Contact_Us.html">Contact us</a></li>
+                <li><a href="16_Pricing.html">Advertising</a></li>
+                <li><a href="18_Basic_Content_Page.html">Masthead &amp; Contributors</a></li>
+                <li><a href="18_Basic_Content_Page.html">Copyright</a></li>
+              </ul>
+            </nav>
+          </div>
+        </div>
+        <p class="copyright">Copyright © TOP - Model School&Agency 2018.</p>
+      </footer>
+
+    </div>
+
+  </div>
+  <script src="js/script.min.js"></script>
+
+</body>
+
+</html>
